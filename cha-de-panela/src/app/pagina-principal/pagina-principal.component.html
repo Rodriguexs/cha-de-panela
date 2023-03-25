@@ -1,0 +1,38 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="card bg-light shadow">
+          <div class="card-body">
+            <h4 class="card-title text-center mb-4">Confirme sua presença</h4>
+            <form>
+              <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="present">Presente:</label>
+                <select class="form-control custom-select" id="present" name="present">
+                  <option value="">Selecione um presente</option>
+                  <option value="presente1">Presente 1</option>
+                  <option value="presente2">Presente 2</option>
+                  <option value="presente3">Presente 3</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="companions">Acompanhantes:</label>
+                <input type="number" class="form-control" id="companions" name="companions" min="0" max="10">
+              </div>
+              <div class="form-check mb-4">
+                <input type="checkbox" class="form-check-input" id="confirm" name="confirm" required>
+                <label class="form-check-label" for="confirm">Confirmar presença</label>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-lg btn-outline-primary">Confirmar Presença</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+  </div>
+  
