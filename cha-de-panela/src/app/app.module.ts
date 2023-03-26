@@ -7,6 +7,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
+import { ConvidadoService } from './pagina-principal/shared/convidado.service';
+import { PresenteService } from './pagina-principal/shared/presente.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,7 @@ import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.co
     HttpClientModule, 
 
   ],
-  providers: [HttpClient],
+  providers: [HttpClient, ConvidadoService, PresenteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
