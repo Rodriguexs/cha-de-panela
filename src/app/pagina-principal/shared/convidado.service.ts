@@ -7,7 +7,7 @@ import { Convidado } from "./model/convidado.model";
   providedIn: 'root'
 })
 export class ConvidadoService {
-  private baseUrl = 'http://localhost:4200/api';
+  private baseUrl = 'https://cha-de-panela-api-production.up.railway.app';
 
 
   constructor(private http: HttpClient) { }
