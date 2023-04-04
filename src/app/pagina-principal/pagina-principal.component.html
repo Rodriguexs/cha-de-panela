@@ -1,0 +1,32 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="card bg-light shadow">
+          <div class="card-body">
+            <h4 class="card-title text-center mb-4">Confirme sua presença</h4>
+            <form (submit)="confirmarPresenca()">
+                <div class="form-group">
+                  <label for="nome">Nome:</label>
+                  <input type="text" class="form-control" id="nome" [(ngModel)]="convidado.nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                  <label for="acompanhantes">Acompanhantes:</label>
+                  <input type="number" class="form-control" id="acompanhantes" [(ngModel)]="convidado.qtdAcompanhantes" name="acompanhantes" required>
+                </div>
+                <div class="form-group">
+                  <label for="presente">Presente:</label>
+                  <select class="form-control" id="presente" [(ngModel)]="convidado.presente" name="presente" required>
+                    <option *ngFor="let item of presentes" [ngValue]="item">{{item.nome}}</option>
+                  </select>
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="attending" [(ngModel)]="convidado.confirmado" name="attending" required>
+                  <label class="form-check-label" for="attending">Confirmo minha presença</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+
+    </div>
+  </div>
+  
