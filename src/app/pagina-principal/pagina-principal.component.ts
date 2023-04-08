@@ -39,8 +39,9 @@ export class PaginaPrincipalComponent implements OnInit {
     this.convidadoService.addConvidado(this.convidado).subscribe((resp) =>{
       this.carregarPresentes();
       alert("Envio realizado com sucesso!");
-
+      this.convidado = new Convidado(); 
     }
     );
   }
+
 }
