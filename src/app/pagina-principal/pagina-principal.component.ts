@@ -27,6 +27,7 @@ export class PaginaPrincipalComponent implements OnInit {
 
   carregarPresentes(){
     this.presenteService.getPresentes().subscribe((data) => {
+      this.presentes = Array<Presente>();
       this.presentes = data;
       this.presentes = this.presentes.filter(item => item.disponivel === true);
     })
@@ -35,7 +36,11 @@ export class PaginaPrincipalComponent implements OnInit {
   confirmarPresenca() {
 
     this.convidado.presente.disponivel = false;
-    this.convidadoService.addConvidado(this.convidado).subscribe((resp) =>
-    this.carregarPresentes() );
+    this.convidadoService.addConvidado(this.convidado).subscribe((resp) =>{
+      this.carregarPresentes();
+      alert("Envio realizado com sucesso!");
+
+    }
+    );
   }
 }
